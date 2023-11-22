@@ -1,0 +1,12 @@
+{
+   "scripts": {
+      "format": "prettier . --write src",
+      "lint": "eslint . --ext .jsx,.js,.tsx,.ts  --no-error-on-unmatched-pattern --fix && stylelint --fix src/{,*/}*.{scss,css} --allow-empty-input",
+   },
+
+   "lint-staged": {
+      "*.{js,ts,tsx,html,vue}": "eslint . --ext .jsx,.js,.tsx,.ts  --no-error-on-unmatched-pattern --fix",
+      "*.{js,ts,jsx,tsx,vue,astro,cjs,mjs,css,scss,html,json}": "prettier --write",
+      "*.{css,scss}": "stylelint --fix --allow-empty-input"
+   }
+}
