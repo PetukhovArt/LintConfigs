@@ -1,86 +1,109 @@
 {
-   "env": {
-      "browser": true,
-      "es2021": true,
-      "jest": true
-   },
-   "extends": ["airbnb-base", "airbnb-typescript", "eslint-config-prettier"],
-   "globals": {
-      "Atomics": "readonly",
-      "SharedArrayBuffer": "readonly"
-   },
-   "parser": "@typescript-eslint/parser",
-   "parserOptions": {
-      "project": "./tsconfig.json",
-      "ecmaFeatures": {
-         "jsx": true
-      },
-      "ecmaVersion": 2018,
-      "sourceType": "module"
-   },
-   "plugins": ["import", "react", "@typescript-eslint"],
-   "rules": {
-      "import/extensions": "off",
-      "import/prefer-default-export": "off",
-      "no-use-before-define": "off",
-      "@typescript-eslint/no-use-before-define": ["off"],
-      "no-shadow": "off",
-      "no-param-reassign": "off",
-      "@typescript-eslint/no-shadow": ["error"],
-      "no-empty": "off",
-      "max-lines": ["error", 300],
-      "import/no-cycle": "off",
-      "no-unused-vars": [
-         "error",
-         {
-            "vars": "all",
-            "args": "none",
-            "ignoreRestSiblings": true,
-            "caughtErrors": "none"
-         }
-      ],
-      "@typescript-eslint/no-unused-vars": [
-         "error",
-         {
-            "vars": "all",
-            "args": "none",
-            "ignoreRestSiblings": true,
-            "caughtErrors": "none"
-         }
-      ],
-      "no-duplicate-imports": "error",
-      "no-nested-ternary": "error",
-      "no-undef": "warn",
-      "react/display-name": "off",
-      "@typescript-eslint/default-param-last": "off",
-      "no-console": [
-         "error",
-         {
-            "allow": ["error", "warn"]
-         }
-      ]
-   },
-   "settings": {
-      "import/parsers": {
-         "@typescript-eslint/parser": [".ts", ".tsx"]
-      },
-      "import/resolver": {
-         "node": {
-            "extensions": [".ts", ".tsx", ".js", ".jsx"],
-            "paths": ["src"]
-         },
-         "typescript": {
-            "alwaysTryTypes": true,
-            "project": "./tsconfig.json"
-         }
-      },
-      "react": {
-         "version": "detect"
-      }
-   },
-   "overrides": [
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript",
+    "eslint-config-prettier",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["import", "react", "@typescript-eslint"],
+  "rules": {
+    "arrow-body-style": ["error", "as-needed"],
+    "no-bitwise": "off",
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "no-nested-ternary": "warn",
+    "no-unneeded-ternary": "warn",
+    "@typescript-eslint/naming-convention": "warn",
+    "no-return-assign": "off",
+    "no-underscore-dangle": "off",
+    "radix": ["error", "as-needed"],
+    "no-plusplus": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "consistent-return": "off",
+    "class-methods-use-this": "off",
+    "import/no-duplicates": [
+      "error",
       {
-         "files": ["**/*.stories.tsx", "**/*.stories.ts"]
+        "prefer-inline": true
       }
-   ]
+    ],
+    "@typescript-eslint/consistent-type-imports": "error",
+    "import/extensions": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["off"],
+    "no-param-reassign": "off",
+    "no-empty": "off",
+    "import/no-cycle": "off",
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "none",
+        "ignoreRestSiblings": true,
+        "caughtErrors": "none"
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "none",
+        "ignoreRestSiblings": true,
+        "caughtErrors": "none"
+      }
+    ],
+    "no-duplicate-imports": "error",
+    "no-undef": "warn",
+    "react/display-name": "off",
+    "@typescript-eslint/default-param-last": "off",
+    "no-console": [
+      "error",
+      {
+        "allow": ["error", "warn"]
+      }
+    ]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.stories.tsx", "**/*.stories.ts"]
+    }
+  ]
 }

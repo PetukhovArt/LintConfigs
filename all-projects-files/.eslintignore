@@ -4,3 +4,5 @@
 **/*.css
 **/*.scss
 **/*.json
+env.d.ts
+#add other unusual files

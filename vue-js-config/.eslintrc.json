@@ -1,66 +1,66 @@
 {
-   "env": {
-      "browser": true,
-      "es2018": true,
-      "jest": true
-   },
-   "extends": [
-      "airbnb-base",
-      "eslint-config-prettier",
-      "plugin:vue/vue3-recommended",
-      "plugin:vue/base",
-      "plugin:vue/vue3-strongly-recommended"
-   ],
-   "parser": "vue-eslint-parser",
-   "globals": {
-      "Atomics": "readonly",
-      "SharedArrayBuffer": "readonly"
-   },
-   "parserOptions": {
-      //    "parser": "@typescript-eslint/parser",
-      "ecmaVersion": 2018,
-      "sourceType": "module"
-   },
-   "plugins": ["import"],
-   "rules": {
-      "import/extensions": "off",
-      "import/prefer-default-export": "off",
-      "no-use-before-define": "off",
-      "no-shadow": "off",
-      "no-param-reassign": "off",
-      "no-empty": "off",
-      "max-lines": ["error", 300],
-      "import/no-cycle": "off",
-      "no-unused-vars": [
-         "error",
-         {
-            "vars": "all",
-            "args": "none",
-            "ignoreRestSiblings": true,
-            "caughtErrors": "none"
-         }
-      ],
-      "no-duplicate-imports": "error",
-      "no-nested-ternary": "error",
-      "no-undef": "warn",
-      "no-console": [
-         "error",
-         {
-            "allow": ["error", "warn"]
-         }
-      ]
-   },
-   "settings": {
-      "import/resolver": {
-         "alias": {
-            "map": [["@", "./src"]],
-            "extensions": [".ts", ".tsx", ".js", ".jsx", ".vue"]
-         }
-      }
-   },
-   "overrides": [
+  "env": {
+    "browser": true,
+    "es2018": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-base",
+    "eslint-config-prettier",
+    "plugin:vue/vue3-recommended",
+    "plugin:vue/base",
+    "plugin:vue/vue3-strongly-recommended"
+  ],
+  "parser": "vue-eslint-parser",
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    //    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["import"],
+  "rules": {
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "no-use-before-define": "off",
+    "no-shadow": "off",
+    "no-param-reassign": "off",
+    "no-empty": "off",
+    "max-lines": ["error", 300],
+    "import/no-cycle": "off",
+    "no-unused-vars": [
+      "error",
       {
-         "files": ["**/*.stories.tsx", "**/*.stories.ts"]
+        "vars": "all",
+        "args": "none",
+        "ignoreRestSiblings": true,
+        "caughtErrors": "none"
       }
-   ]
+    ],
+    "no-duplicate-imports": "error",
+    "no-nested-ternary": "error",
+    "no-undef": "warn",
+    "no-console": [
+      "error",
+      {
+        "allow": ["error", "warn"]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [["@", "./src"]],
+        "extensions": [".ts", ".tsx", ".js", ".jsx", ".vue"]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.stories.tsx", "**/*.stories.ts"]
+    }
+  ]
 }

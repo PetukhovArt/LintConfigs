@@ -8,13 +8,13 @@
    "singleQuote": false,
    "quoteProps": "as-needed",
    "jsxSingleQuote": false,
-   "arrowParens": "always",
+   "arrowParens": "avoid",
    "endOfLine": "auto",
    "embeddedLanguageFormatting": "auto",
    "vueIndentScriptAndStyle": true,
    "overrides": [
       {
-         "files": "{**/*,*}.{css,scss,sass,less,js,jsx,ts,tsx,json,md,mdx}",
+         "files": "{**/*,*}.{css,scss,sass,less,js,jsx,ts,tsx,json,md,mdx,vue}",
          "excludeFiles": [
             "**/node_modules/**",
             "**/dist/**",

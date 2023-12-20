@@ -1,18 +1,18 @@
 {
-  "extends": [
-    "stylelint-config-standard-scss",
-    "stylelint-config-clean-order",
-    "stylelint-config-prettier"
-  ],
-  "rules": {
-    "selector-pseudo-class-no-unknown": [
-      true,
-      {
-        "ignorePseudoClasses": [
-          "global"
-        ]
-      }
-    ],
-    "selector-class-pattern": null
-  }
+   "extends": [
+      "stylelint-config-standard-scss",
+      "stylelint-config-clean-order",
+      "stylelint-config-prettier-scss"
+   ],
+   "rules": {
+      "value-no-vendor-prefix": null,
+      "property-no-vendor-prefix": null,
+      "selector-pseudo-class-no-unknown": [
+         true,
+         {
+            "ignorePseudoClasses": ["global"]
+         }
+      ],
+      "selector-class-pattern": null
+   }
 }
