@@ -1,28 +1,29 @@
-## Настройка Linters & Husky pre-commit
-## ESLint конфиг на основе AirBnb JS/TS
+## Setting up Linters & Husky pre-commit
+## ESLint config based on AirBnb JS/TS
 
-1. ### До момента устранения всех ошибок ESLint, не устанавливать/не включать husky pre-commit)
-2. Установка расширений (предварительно вставить зависимости в package.json):
+1. ### Do not install/enable husky pre-commit until all ESLint errors are resolved
+2. Installation of extensions (first, insert dependencies into package.json):
    - `npm install`
-   - Установите необходимые dev зависимости из package.json файла соответствующего проекта (react-ts / vue-js / ....)
-3. Скопируйте в свой проект:
-   - .eslintrc.json из соответствующего проекта в корневую папку своего проекта
-   - дополните своей package.json кодом из package.json файла соответствующего проекта
-   - скопируйте файлы .prettierrc.json, .stylelintrc.json, .prettierignore, .eslintignore из папки all-projects-files в корневую папку своего проекта
-4. файл watchers.xml - утилка для автоматического линтинги css /scss файлов
-   - в IDE Webstorm подключается в settings > tools > filewatchers
-   - делаем импорт данного файла и включаем styleint, styleint scss
-5. Устранить появляющиеся ошибки импортов/ необходимых зависимостей
-6. Для VSCode необходимо установить и включить расширения prettier , eslint, styleint
-7. Для VSCode необходимо настроить файл settings.json
-8. Запустить линтеры : npm run lint , npm run format
-9. Проанализировать ошибки , при появлении каких-либо ошибок, которые уже очень сложно исправить , сообщайте в группу TG , будем обсуждать изменение конфигов > далее отладка > запуск на живых проектах
-10. После утверждения конечных конфигов и устранения всех ошибок, установить/включить husky и гит хуки и проверить работоспособность husky pre-commit , должен запрещать сделать push при наличии ESLint error :
+   - Install the necessary dev dependencies from the package.json file of the corresponding project (react-ts / vue-js / ....)
+3. Copy to your project:
+   - .eslintrc.json from the corresponding project into the root folder of your project
+   - supplement your package.json with the code from the package.json file of the corresponding project
+   - copy the files .prettierrc.json, .stylelintrc.json, .prettierignore, .eslintignore from the folder all-projects-files into the root folder of your project
+4. watchers.xml file - a utility for automatic linting of css /scss files
+   - in the IDE Webstorm, connect in settings > tools > filewatchers
+   - import this file and enable styleint, styleint scss
+5. Resolve emerging import errors / necessary dependencies
+6. For VSCode, it is necessary to install and enable the prettier, eslint, styleint extensions
+7. For VSCode, it is necessary to configure the settings.json file
+8. Run the linters: npm run lint, npm run format
+9. Analyze errors, if any errors appear that are already very difficult to correct, report in the TG group, we will discuss changing configs > then debugging > launching on live projects
+10. After finalizing the configs and resolving all errors, install/enable husky and git hooks and check the functionality of husky pre-commit, it should prevent push if there are ESLint errors:
 - `npm i lint-staged --save-dev`
 - `npx husky-init && npm install`
 - `npx husky add .husky/pre-commit "npx lint-staged"`
-- В папке husky -> pre-commit ->  закомментировать npm test (если у вас нет тестов в проекте)
-- Специально оставить/создать одну ESLint ошибку для проверки работоспособности husky
+- In the husky -> pre-commit folder -> comment out npm test (if you do not have tests in your project)
+- Intentionally leave/create one ESLint error to check the functionality of husky
 
-### Конфиг оттестирован : **react-ts (vite)**
+### Config tested on: **react-ts (vite)**
+
 
